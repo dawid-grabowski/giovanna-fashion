@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+import styled from 'styled-components';
+import { Navbar } from './components/navbar/navbar';
 
-const App: React.FC = (): React.ReactElement => {
-	return <div className='App'>Hello Giovanna!</div>;
-};
+const GlobalWrapperStyled = styled.div`
+	width: 100%;
+	max-width: 144rem;
+	margin: 0 auto;
+	padding: 3rem 4rem;
+`;
 
-export default App;
+export default function App(): ReactElement {
+	return (
+		<GlobalWrapperStyled>
+			<Navbar />
+		</GlobalWrapperStyled>
+	);
+}
